@@ -1,2 +1,2 @@
 # pruebas
-Estis son pruebas y desafios de cuando recien estaba aprendiendo las bases de java.
+Estas son pruebas y desafios de cuando recien estaba aprendiendo las bases de java.
