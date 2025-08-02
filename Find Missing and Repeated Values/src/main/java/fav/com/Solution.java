@@ -46,8 +46,38 @@ public class Solution {
         response.add(count);
         return response;
     }
+    //Nueva solucion 
+     public int[] repeatNumber(int[][] list) {
+         int missNum = 1;
+         int repetNum = 1;
+         List<Integer> list1 = new ArrayList<>();
+         Set<Integer> listSet = new HashSet<>();
 
-
+         for (int i = 0; i < list.length; i++) {
+             for (int j = 0; j < list[i].length; j++) {
+                 list1.add(list[i][j]);
+                 listSet.add(list[i][j]);
+             }
+         }
+         for (int i = 1; i < list1.size(); i++) {
+             if (list1.get(i-1).equals(list1.get(i))) {
+                 repetNum = list1.get(i);
+             }
+         }
+         int count = 1;
+         List<Integer> set = new ArrayList<>(listSet);
+         for (int i = 0; i < set.size(); i++) {
+             if (set.get(i) == count) {
+                 count++;
+             }else {
+                 missNum = count;
+                 return new int[]{repetNum, missNum};
+             }
+         }
+         missNum = count;
+         return new int[]{repetNum, missNum};
+     }
 
 
 }
+
